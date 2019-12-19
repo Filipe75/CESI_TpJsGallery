@@ -1,0 +1,55 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#image-container {
+  display: flex;
+  justify-content: center;
+  max-width: 550px;
+  flex-wrap: wrap;
+}
+
+#image-container a img {
+  height: 100px;
+  width: 100px;
+  margin: 5px;
+  transition: transform 0.2s;
+}
+
+#image-container a img:hover {
+  transform: scale(1.5);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  margin-top: 2%;
+}
+
+.lightbox:target {
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
